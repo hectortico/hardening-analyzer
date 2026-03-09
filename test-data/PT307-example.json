@@ -1,0 +1,1479 @@
+﻿{
+    "usuario":  "SISTEPLANT\\hlopez",
+    "duracion_seg":  38.64,
+    "errors":  1,
+    "checks":  {
+                   "Actualizaciones y Parches":  {
+                                                     "action1":  {
+                                                                     "detalle":  "Agente Action1 activo y en ejecucion",
+                                                                     "valor":  "Running",
+                                                                     "criticidad":  "ALTA",
+                                                                     "estado":  "OK"
+                                                                 },
+                                                     "windows_update_bloqueado":  {
+                                                                                      "detalle":  "Acceso manual a Windows Update correctamente bloqueado",
+                                                                                      "valor":  "Bloqueado",
+                                                                                      "criticidad":  "MEDIA",
+                                                                                      "estado":  "OK"
+                                                                                  },
+                                                     "parches_recientes":  {
+                                                                               "detalle":  "Ultima actualizacion: 2025-10-12 (66 dias)",
+                                                                               "valor":  "2025-10-12",
+                                                                               "criticidad":  "ALTA",
+                                                                               "estado":  "WARNING"
+                                                                           }
+                                                 },
+                   "Cifrado de Datos":  {
+                                            "bitlocker":  {
+                                                              "detalle":  "BitLocker activo en unidad C:",
+                                                              "valor":  "Activado",
+                                                              "criticidad":  "ALTA",
+                                                              "estado":  "OK"
+                                                          }
+                                        },
+                   "Validacion Avanzada":  {
+                                               "soporte_windows":  {
+                                                                       "detalle":  "Windows Windows 11 (build 26200) con soporte activo",
+                                                                       "valor":  "Windows 11 (build 26200) (Soportado)",
+                                                                       "criticidad":  "BAJA",
+                                                                       "estado":  "OK"
+                                                                   },
+                                               "laps_detallado":  {
+                                                                      "detalle":  "LAPS con problemas: LAPS no instalado",
+                                                                      "valor":  "Configuracion incorrecta",
+                                                                      "criticidad":  "ALTA",
+                                                                      "estado":  "ERROR"
+                                                                  },
+                                               "bitlocker_detallado":  {
+                                                                           "detalle":  "BitLocker 100% | TPM: 2.0 | SecureBoot: False | Secure Boot deshabilitado o BIOS Legacy; GPO de BitLocker NO detectada en gpresult",
+                                                                           "valor":  "100%",
+                                                                           "criticidad":  "ALTA",
+                                                                           "estado":  "WARNING"
+                                                                       }
+                                           },
+                   "Firewall y Seguridad de Red":  {
+                                                       "forticlient_vpn":  {
+                                                                               "detalle":  "FortiClient VPN instalado y activo",
+                                                                               "valor":  "Running",
+                                                                               "criticidad":  "MEDIA",
+                                                                               "estado":  "OK"
+                                                                           },
+                                                       "firewall":  {
+                                                                        "detalle":  "Firewall activo en todos los perfiles",
+                                                                        "valor":  "Todos activos",
+                                                                        "criticidad":  "ALTA",
+                                                                        "estado":  "OK"
+                                                                    }
+                                                   },
+                   "Superficie de Ataque":  {
+                                                "smbv1":  {
+                                                              "detalle":  "SMBv1 correctamente deshabilitado",
+                                                              "valor":  "Deshabilitado",
+                                                              "criticidad":  "ALTA",
+                                                              "estado":  "OK"
+                                                          },
+                                                "telnet":  {
+                                                               "detalle":  "Telnet Server no esta instalado",
+                                                               "valor":  "No instalado",
+                                                               "criticidad":  "ALTA",
+                                                               "estado":  "OK"
+                                                           },
+                                                "remote_assistance":  {
+                                                                          "detalle":  "Remote Assistance correctamente deshabilitado",
+                                                                          "valor":  "Deshabilitado",
+                                                                          "criticidad":  "MEDIA",
+                                                                          "estado":  "OK"
+                                                                      },
+                                                "carpetas_compartidas":  {
+                                                                             "detalle":  "Sin recursos compartidos no autorizados",
+                                                                             "valor":  "Ninguno",
+                                                                             "criticidad":  "ALTA",
+                                                                             "estado":  "OK"
+                                                                         },
+                                                "ipv6":  {
+                                                             "detalle":  "IPv6 correctamente desactivado",
+                                                             "valor":  "Desactivado",
+                                                             "criticidad":  "MEDIA",
+                                                             "estado":  "OK"
+                                                         }
+                                            },
+                   "Usuarios y Grupos":  {
+                                             "wdag_utility":  {
+                                                                  "detalle":  "WDAGUtilityAccount deshabilitada",
+                                                                  "valor":  "Desactivado",
+                                                                  "criticidad":  "BAJA",
+                                                                  "estado":  "OK"
+                                                              },
+                                             "default_account":  {
+                                                                     "detalle":  "DefaultAccount deshabilitada",
+                                                                     "valor":  "Desactivado",
+                                                                     "criticidad":  "BAJA",
+                                                                     "estado":  "OK"
+                                                                 },
+                                             "administradores":  {
+                                                                     "detalle":  "Numero elevado de administradores (5)",
+                                                                     "valor":  "5 admins",
+                                                                     "criticidad":  "ALTA",
+                                                                     "estado":  "WARNING"
+                                                                 },
+                                             "usuario_admin":  {
+                                                                   "detalle":  "Usuario actual pertenece al grupo Administradores",
+                                                                   "valor":  "SISTEPLANT\\hlopez",
+                                                                   "criticidad":  "ALTA",
+                                                                   "estado":  "OK"
+                                                               },
+                                             "invitado":  {
+                                                              "detalle":  "Usuario Invitado correctamente deshabilitado",
+                                                              "valor":  "Desactivado",
+                                                              "criticidad":  "ALTA",
+                                                              "estado":  "OK"
+                                                          },
+                                             "usuarios_avanzados":  {
+                                                                        "detalle":  "Grupo Usuarios Avanzados vacio (Correcto)",
+                                                                        "valor":  "Vacio",
+                                                                        "criticidad":  "MEDIA",
+                                                                        "estado":  "OK"
+                                                                    }
+                                         },
+                   "Software Instalado":  {
+                                              "listado_completo":  {
+                                                                       "detalle":  "Software instalado requiere revision manual",
+                                                                       "valor":  "208 aplicaciones",
+                                                                       "criticidad":  "MEDIA",
+                                                                       "estado":  "WARNING"
+                                                                   }
+                                          },
+                   "Proteccion contra Malware":  {
+                                                     "antivirus_activo":  {
+                                                                              "detalle":  "Antivirus ESET instalado y activo",
+                                                                              "valor":  "ESET Running",
+                                                                              "criticidad":  "ALTA",
+                                                                              "estado":  "OK"
+                                                                          },
+                                                     "wazuh_agent":  {
+                                                                         "detalle":  "Agente Wazuh instalado y reportando",
+                                                                         "valor":  "Running",
+                                                                         "criticidad":  "ALTA",
+                                                                         "estado":  "OK"
+                                                                     },
+                                                     "teamviewer":  {
+                                                                        "detalle":  "TeamViewer instalado y activo",
+                                                                        "valor":  "Running",
+                                                                        "criticidad":  "MEDIA",
+                                                                        "estado":  "OK"
+                                                                    }
+                                                 },
+                   "Configuracion de Dominio":  {
+                                                    "nomenclatura":  {
+                                                                         "detalle":  "Nombre cumple nomenclatura corporativa",
+                                                                         "valor":  "PT307",
+                                                                         "criticidad":  "MEDIA",
+                                                                         "estado":  "OK"
+                                                                     },
+                                                    "sistema_operativo":  {
+                                                                              "detalle":  "Microsoft Windows 11 Pro Build 26200",
+                                                                              "valor":  "Microsoft Windows 11 Pro (26200)",
+                                                                              "criticidad":  "BAJA",
+                                                                              "estado":  "OK"
+                                                                          },
+                                                    "dominio":  {
+                                                                    "detalle":  "Correctamente unido al dominio Sisteplant.com",
+                                                                    "valor":  "Sisteplant.com",
+                                                                    "criticidad":  "ALTA",
+                                                                    "estado":  "OK"
+                                                                }
+                                                }
+               },
+    "passed":  22,
+    "laps_detallado":  {
+                           "instalado":  false,
+                           "ou_equipo":  "IT",
+                           "funcional":  null,
+                           "debe_tener_laps":  true,
+                           "usuario_admin_actual":  "robin",
+                           "usuario_esperado":  "robin",
+                           "motivo_fallo":  "LAPS no instalado",
+                           "password_expiracion":  null
+                       },
+    "bitlocker_detallado":  {
+                                "tpm_presente":  true,
+                                "tpm_ready":  true,
+                                "gpo_aplicada":  false,
+                                "tpm_version":  "2.0",
+                                "recovery_key_en_ad":  true,
+                                "secure_boot":  false,
+                                "metodo_cifrado":  "XtsAes128",
+                                "motivo_fallo":  "Secure Boot deshabilitado o BIOS Legacy; GPO de BitLocker NO detectada en gpresult",
+                                "encriptacion_porcentaje":  100,
+                                "estado":  "FullyEncrypted"
+                            },
+    "domain":  "Sisteplant.com",
+    "hostname":  "PT307",
+    "software_instalado":  [
+                               {
+                                   "nombre":  "7-Zip 25.01 (x64 edition)",
+                                   "fabricante":  "Igor Pavlov",
+                                   "version":  "25.01.00.0",
+                                   "fecha_instalacion":  "20250806"
+                               },
+                               {
+                                   "nombre":  "Action1 Agent",
+                                   "fabricante":  "Action1 Corporation",
+                                   "version":  "5.246.648.1",
+                                   "fecha_instalacion":  "20251202"
+                               },
+                               {
+                                   "nombre":  "AD Photo Edit Free Edition",
+                                   "fabricante":  "Cjwdev",
+                                   "version":  "2.6.1",
+                                   "fecha_instalacion":  "20250324"
+                               },
+                               {
+                                   "nombre":  "Adobe Acrobat Reader",
+                                   "fabricante":  "Adobe Systems Incorporated",
+                                   "version":  "25.001.20937",
+                                   "fecha_instalacion":  "20251127"
+                               },
+                               {
+                                   "nombre":  "AnyBurn",
+                                   "fabricante":  "Power Software Ltd",
+                                   "version":  "6.5",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Aplicaciones de Microsoft 365 para negocios - es-es",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.19328.20244",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Apple Mobile Device Support",
+                                   "fabricante":  "Apple Inc.",
+                                   "version":  "18.5.0.13",
+                                   "fecha_instalacion":  "20250430"
+                               },
+                               {
+                                   "nombre":  "Application Verifier x64 External Package (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Application Verifier x64 External Package (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Asistente para la instalación de Windows 11",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "1.4.19041.5003",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Autodesk Inventory Tool",
+                                   "fabricante":  "Autodesk",
+                                   "version":  "2.3.2",
+                                   "fecha_instalacion":  "20250909"
+                               },
+                               {
+                                   "nombre":  "AutoFirma",
+                                   "fabricante":  "Gobierno de España",
+                                   "version":  "1.8.3",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Azure Data Studio",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "1.52.0",
+                                   "fecha_instalacion":  "20250626"
+                               },
+                               {
+                                   "nombre":  "Bang \u0026 Olufsen Audio",
+                                   "fabricante":  "Conexant",
+                                   "version":  "9.0.278.150",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "BCD and Boot",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Bonjour",
+                                   "fabricante":  "Apple Inc.",
+                                   "version":  "3.1.0.1",
+                                   "fecha_instalacion":  "20250430"
+                               },
+                               {
+                                   "nombre":  "Complementos del entorno de preinstalación de Windows de Windows Assessment and Deployment Kit",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "DiagnosticsHub_CollectionService",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36412",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "ESET Endpoint Security",
+                                   "fabricante":  "ESET, spol. s r.o.",
+                                   "version":  "12.1.2057.3",
+                                   "fecha_instalacion":  "20251015"
+                               },
+                               {
+                                   "nombre":  "ESET Management Agent",
+                                   "fabricante":  "ESET, spol. s r.o.",
+                                   "version":  "12.5.2104.0",
+                                   "fecha_instalacion":  "20251030"
+                               },
+                               {
+                                   "nombre":  "FileZilla 3.69.5",
+                                   "fabricante":  "Tim Kosse",
+                                   "version":  "3.69.5",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "FortiClient VPN",
+                                   "fabricante":  "Fortinet Technologies Inc",
+                                   "version":  "7.4.3.1790",
+                                   "fecha_instalacion":  "20251127"
+                               },
+                               {
+                                   "nombre":  "Google Chrome",
+                                   "fabricante":  "Google LLC",
+                                   "version":  "143.0.7499.110",
+                                   "fecha_instalacion":  "20251215"
+                               },
+                               {
+                                   "nombre":  "HP Accessory WMI Provider",
+                                   "fabricante":  "HP Inc.",
+                                   "version":  "1.4.6",
+                                   "fecha_instalacion":  "20251127"
+                               },
+                               {
+                                   "nombre":  "HP USB-C Dock G5 Firmware Installer",
+                                   "fabricante":  "HP Inc.",
+                                   "version":  "1.0.25.0",
+                                   "fecha_instalacion":  "20251127"
+                               },
+                               {
+                                   "nombre":  "HP USB-C\u0026A Universal Dock G2 Firmware Installer",
+                                   "fabricante":  "HP Inc.",
+                                   "version":  "1.1.23.0",
+                                   "fecha_instalacion":  "20250305"
+                               },
+                               {
+                                   "nombre":  "IIS 10.0 Express",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.08608",
+                                   "fecha_instalacion":  "20250731"
+                               },
+                               {
+                                   "nombre":  "Intel(R) Chipset Device Software",
+                                   "fabricante":  "Intel Corporation",
+                                   "version":  "10.1.19444.8378",
+                                   "fecha_instalacion":  "20250305"
+                               },
+                               {
+                                   "nombre":  "IrfanView 4.73 (64-bit)",
+                                   "fabricante":  "Irfan Skiljan",
+                                   "version":  "4.73",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "KeePass Password Safe 2.60",
+                                   "fabricante":  "Dominik Reichl",
+                                   "version":  "2.60",
+                                   "fecha_instalacion":  "20251105"
+                               },
+                               {
+                                   "nombre":  "Kits Configuration Installer",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "K-Lite Codec Pack 19.3.5 Full",
+                                   "fabricante":  "KLCP",
+                                   "version":  "19.3.5",
+                                   "fecha_instalacion":  "20251215"
+                               },
+                               {
+                                   "nombre":  "Logi RightSightForWebcams 1.1.131",
+                                   "fabricante":  "Logitech",
+                                   "version":  "1.1.131.0",
+                                   "fecha_instalacion":  "20250402"
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics 365 Business Central",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.0.32600.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics 365 Business Central Setup",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.0.32600.0",
+                                   "fecha_instalacion":  "20250730"
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics NAV 2017",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics NAV 2017 Outlook Add-in",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics NAV 2017 RoleTailored Client",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics NAV RoleTailored Client",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.0.32600.0",
+                                   "fecha_instalacion":  "20250730"
+                               },
+                               {
+                                   "nombre":  "Microsoft Dynamics NAV Setup",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Microsoft Edge",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "143.0.3650.80",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Microsoft ODBC Driver 17 for SQL Server",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.10.6.1",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "Microsoft OLE DB Driver for SQL Server",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "18.7.5.0",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Microsoft OneDrive",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "25.222.1112.0002",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Report Viewer 2015 Runtime",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "12.0.2402.15",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Microsoft SQL Server 2016 LocalDB ",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "13.3.7037.1",
+                                   "fecha_instalacion":  "20250731"
+                               },
+                               {
+                                   "nombre":  "Microsoft SQL Server 2022 Setup (English)",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.1000.6",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "Microsoft Teams Meeting Add-in for Microsoft Office",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "1.25.28902",
+                                   "fecha_instalacion":  "20251120"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X64 Additional Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X64 Debug Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X86 Additional Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X86 Debug Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.44.35211",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual Studio 2010 Tools for Office Runtime (x64)",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.50701",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual Studio 2010 Tools for Office Runtime (x64) Language Pack - ESN",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.50701",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual Studio Installer",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "4.0.2166.47498",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual Studio Setup Configuration",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "3.12.2140.44225",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Visual Studio Setup WMI Provider",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "3.12.2140.44225",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Microsoft Web Deploy 4.0",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.8215",
+                                   "fecha_instalacion":  "20250731"
+                               },
+                               {
+                                   "nombre":  "MSI Development Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Nmap 7.97",
+                                   "fabricante":  "Nmap Project",
+                                   "version":  "7.97",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Node.js",
+                                   "fabricante":  "Node.js Foundation",
+                                   "version":  "24.11.1",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "NoMachine",
+                                   "fabricante":  "NoMachine S.a.r.l.",
+                                   "version":  "9.1.24",
+                                   "fecha_instalacion":  "20250909"
+                               },
+                               {
+                                   "nombre":  "Notepad++ (64-bit x64)",
+                                   "fabricante":  "Notepad++ Team",
+                                   "version":  "8.8.8",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Npcap",
+                                   "fabricante":  "Nmap Project",
+                                   "version":  "1.82",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "OA3Tool",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "OACheck",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "OATool",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Office 16 Click-to-Run Extensibility Component",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.19328.20106",
+                                   "fecha_instalacion":  "20251105"
+                               },
+                               {
+                                   "nombre":  "Office 16 Click-to-Run Licensing Component",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.19029.20208",
+                                   "fecha_instalacion":  "20250820"
+                               },
+                               {
+                                   "nombre":  "Office 16 Click-to-Run Localization Component",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.19328.20106",
+                                   "fecha_instalacion":  "20251105"
+                               },
+                               {
+                                   "nombre":  "Open XML SDK 2.5 for Microsoft Office",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "2.5.5631",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Oracle SQL Developer",
+                                   "fabricante":  "Oracle",
+                                   "version":  "24.3.1.347.1826",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Oscdimg (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Oscdimg (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Paquete de idioma de Microsoft Visual Studio 2010 Tools para Office Runtime (x64) - ESN",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.50701",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "PowerShell 7.5.4.0-x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "7.5.4.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "PowerShell 7-x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "7.5.4.0",
+                                   "fecha_instalacion":  "20251105"
+                               },
+                               {
+                                   "nombre":  "PuTTY release 0.83 (64-bit)",
+                                   "fabricante":  "Simon Tatham",
+                                   "version":  "0.83.0.0",
+                                   "fecha_instalacion":  "20250208"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Add to Path (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Core Interpreter (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Development Libraries (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Documentation (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Executables (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 pip Bootstrap (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Standard Library (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python 3.14.2 Tcl/Tk Support (64-bit)",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "Python Launcher",
+                                   "fabricante":  "Python Software Foundation",
+                                   "version":  "3.14.2150.0",
+                                   "fecha_instalacion":  "20251210"
+                               },
+                               {
+                                   "nombre":  "qpdf 11.9.1",
+                                   "fabricante":  "Humanity",
+                                   "version":  "11.9.1",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Realtek USB Audio",
+                                   "fabricante":  "Realtek Semiconductor Corp.",
+                                   "version":  "6.4.0.393",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Remote Desktop Connection Manager",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "2.7.14060",
+                                   "fecha_instalacion":  "20240906"
+                               },
+                               {
+                                   "nombre":  "SDK ARM64 Additions",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "SDK ARM64 Redistributables",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Software Thunderbolt™",
+                                   "fabricante":  "Intel Corporation",
+                                   "version":  "17.4.78.500",
+                                   "fecha_instalacion":  "20250723"
+                               },
+                               {
+                                   "nombre":  "Spanish Module for Microsoft Dynamics NAV 2017 Outlook Add-In",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "Spanish Module for Microsoft Dynamics NAV 2017 Role Tailored Client",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.14767.0",
+                                   "fecha_instalacion":  "20250703"
+                               },
+                               {
+                                   "nombre":  "SQL Server 2022 SQL Data Quality Common",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "16.0.1000.6",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "TeamViewer",
+                                   "fabricante":  "TeamViewer",
+                                   "version":  "15.72.6",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Tenorshare 4uKey 3.8.7.4",
+                                   "fabricante":  "TENORSHARE(HONGKONG)LIMITED",
+                                   "version":  "3.8.7.4",
+                                   "fecha_instalacion":  "20250102"
+                               },
+                               {
+                                   "nombre":  "Toolkit Documentation",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "TunnelBear",
+                                   "fabricante":  "TunnelBear",
+                                   "version":  "4.13.2.0",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Universal CRT Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Universal CRT Headers Libraries and Sources",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Universal CRT Redistributable",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.0.26624",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Universal CRT Tools x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Universal CRT Tools x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Universal General MIDI DLS Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "User State Migration Tool (ClientCore)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "User State Migration Tool (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "User State Migration Tool (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "vcpp_crt.redist.clickonce",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "14.44.35211",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Visual Studio Build Tools 2022",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.21 (November 2025)",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "VS Script Debugging Common",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.0.157.0",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_communitymsires",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_communitysharedmsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36025",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_communityx64msi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36025",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_CoreEditorFonts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.7.40001",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "vs_filehandler_amd64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36024",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "vs_filehandler_x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36024",
+                                   "fecha_instalacion":  "20250708"
+                               },
+                               {
+                                   "nombre":  "vs_FileTracker_Singleton",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_githubprotocolhandlermsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_minshellinteropmsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_minshellinteropsharedmsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_minshellmsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36301",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_minshellmsires",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36015",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_minshellsharedmsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36024",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_vswebprotocolselectormsi",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36323",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "vs_vswebprotocolselectormsires",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "17.14.36323",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Wazuh Agent",
+                                   "fabricante":  "Wazuh, Inc.",
+                                   "version":  "4.14.1",
+                                   "fecha_instalacion":  "20251126"
+                               },
+                               {
+                                   "nombre":  "WebView2 Runtime de Microsoft Edge",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "143.0.3650.80",
+                                   "fecha_instalacion":  "20251215"
+                               },
+                               {
+                                   "nombre":  "WinAppDeploy",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows App Certification Kit Native Components",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows App Certification Kit SupportedApiList x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows App Certification Kit x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows App Certification Kit x64 (OnecoreUAP)",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Assessment and Deployment Kit",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Customizations",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Image Servicing and Management - Headers and Libraries",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Image Servicing and Management Tools (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Image Servicing and Management Tools (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Tools",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Deployment Tools Environment",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Desktop Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Desktop Extension SDK Contracts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows IoT Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows IoT Extension SDK Contracts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Mobile Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Mobile Extension SDK Contracts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows PE Boot Files (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250724"
+                               },
+                               {
+                                   "nombre":  "Windows PE Boot Files (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250724"
+                               },
+                               {
+                                   "nombre":  "Windows PE Optional Packages (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250724"
+                               },
+                               {
+                                   "nombre":  "Windows PE Scripts",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250724"
+                               },
+                               {
+                                   "nombre":  "Windows PE wims (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250724"
+                               },
+                               {
+                                   "nombre":  "Windows SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK AddOn",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.0.0",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK ARM64 Desktop Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Headers arm64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Headers x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Headers x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Libs arm64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Libs x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Libs x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Tools arm64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Tools x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Desktop Tools x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK DirectX x64 Remote",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK DirectX x86 Remote",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK EULA",
+                                   "fabricante":  "Microsoft Corporations",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Facade Windows WinMD Versioned",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Contracts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps DirectX x86 Remote",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Headers",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Headers OnecoreUap",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Libs",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Metadata",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Apps Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK for Windows Store Managed Apps Libs",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Modern Non-Versioned Developer Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Modern Versioned Developer Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK OnecoreUap Headers arm64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK OnecoreUap Headers x64",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK OnecoreUap Headers x86",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Redistributables",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows SDK Signing Tools",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Setup Files (ClientCore)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Setup Files (DesktopEditions)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Setup Files (Holographic)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Setup Files (OnecoreUAP)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Setup Files (ShellCommon)",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Software Development Kit - Windows 10.0.26100.6901",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  null
+                               },
+                               {
+                                   "nombre":  "Windows System Image Manager",
+                                   "fabricante":  "Microsoft",
+                                   "version":  "10.1.26100.2454",
+                                   "fecha_instalacion":  "20250714"
+                               },
+                               {
+                                   "nombre":  "Windows Team Extension SDK",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "Windows Team Extension SDK Contracts",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense Desktop - en-us",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense Desktop - Other Languages",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense IoT - en-us",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense IoT - Other Languages",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense Mobile - en-us",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense PPI - en-us",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense PPI - Other Languages",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense UAP - en-us",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinRT Intellisense UAP - Other Languages",
+                                   "fabricante":  "Microsoft Corporation",
+                                   "version":  "10.1.26100.6901",
+                                   "fecha_instalacion":  "20251201"
+                               },
+                               {
+                                   "nombre":  "WinSCP 6.5.5",
+                                   "fabricante":  "Martin Prikryl",
+                                   "version":  "6.5.5",
+                                   "fecha_instalacion":  "20251127"
+                               },
+                               {
+                                   "nombre":  "XmlNotepad",
+                                   "fabricante":  "Lovett Software",
+                                   "version":  "2.9.0.16",
+                                   "fecha_instalacion":  "20250730"
+                               }
+                           ],
+    "version_script":  "5.4.9",
+    "sistema_operativo":  {
+                              "version":  "Windows 11 (build 26200)",
+                              "nombre":  "Microsoft Windows 11 Pro",
+                              "critico":  true,
+                              "fecha_fin_soporte":  "Desconocida",
+                              "soporte_activo":  null,
+                              "dias_restantes":  null,
+                              "build":  "26200"
+                          },
+    "compliance_score":  81.48,
+    "scan_date":  "2025-12-17T09:17:03Z",
+    "total_checks":  27,
+    "acciones_correctivas":  [
+                                 "GPO BitLocker forzada"
+                             ],
+    "warnings":  4
+}
