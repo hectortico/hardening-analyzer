@@ -1,7 +1,7 @@
 {
   "name": "hardening-analyzer",
-  "version": "1.0.0",
-  "description": "Analizador de Auditoría de Hardening ISO 27001 para Sisteplant",
+  "version": "3.1.0",
+  "description": "Analizador de Auditoría de Hardening ISO 27001 para Sisteplant - Compatible con N8N v5 FINAL",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
@@ -9,7 +9,13 @@
     "start": "node dist/server.js",
     "test": "echo \"Tests TODO\" && exit 0"
   },
-  "keywords": ["iso27001", "hardening", "security", "audit"],
+  "keywords": [
+    "iso27001",
+    "hardening",
+    "security",
+    "audit",
+    "sisteplant"
+  ],
   "author": "Sisteplant IT",
   "license": "UNLICENSED",
   "dependencies": {

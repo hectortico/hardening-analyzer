@@ -1,4 +1,5 @@
 // types.ts - Tipos TypeScript para el proyecto
+// Versión 3.1 - Compatible con workflow N8N v5 FINAL
 
 export interface ComplianceCheck {
   estado: 'OK' | 'WARNING' | 'ERROR';
@@ -11,9 +12,9 @@ export interface ComplianceCheck {
 
 export interface ComplianceData {
   hostname: string;
-  domain: string;
-  scan_date: string;
-  usuario: string;
+  domain?: string;
+  scan_date?: string;
+  usuario?: string;
   compliance_score: number;
   total_checks: number;
   passed: number;
@@ -25,8 +26,35 @@ export interface ComplianceData {
     };
   };
   acciones_correctivas?: string[];
-  duracion_seg: number;
-  version_script: string;
+  duracion_seg?: number;
+  version_script?: string;
+  software_instalado?: { nombre: string; version: string }[];
+  sistema_operativo?: {
+    nombre?: string;
+    version?: string;
+    build?: string;
+    soporte_activo?: boolean;
+    fecha_fin_soporte?: string;
+    dias_restantes?: number;
+    critico?: boolean;
+  };
+  bitlocker_detallado?: {
+    encriptacion_porcentaje?: number;
+    tpm_version?: string;
+    tpm_ready?: boolean;
+    secure_boot?: boolean;
+    gpo_aplicada?: boolean;
+    motivo_fallo?: string;
+  };
+  laps_detallado?: {
+    instalado?: boolean;
+    funcional?: boolean;
+    usuario_admin_actual?: string;
+    usuario_esperado?: string;
+    debe_tener_laps?: boolean;
+    ou_equipo?: string;
+    motivo_fallo?: string;
+  };
 }
 
 export interface Finding {
@@ -44,28 +72,74 @@ export interface ControlISO27001 {
   anexo: string;
 }
 
+// AnalysisResponse compatible con lo que espera el nodo "📊 Extraer Análisis IA" del workflow N8N
+// El nodo espera la estructura de Gemini IA (análisis completo con 6 secciones)
 export interface AnalysisResponse {
   hostname: string;
   fecha_analisis: string;
-  score: number;
+  compliance_score: number;
+  score: number; // alias para compatibilidad
+
+  // Resumen ejecutivo
   resumen_ejecutivo: string;
-  controles_iso_afectados: ControlISO27001[];
-  riesgos_principales: string[];
+
+  // Mapeo ISO 27001 (estructura que espera el nodo)
+  mapeo_iso27001: {
+    controles_afectados: {
+      codigo: string;
+      nombre: string;
+      estado: 'NO_CONFORME' | 'PARCIAL' | 'CONFORME';
+      hallazgo_relacionado: string;
+      control_ens?: string;
+    }[];
+    impacto_certificacion: string;
+    requisitos_pendientes: string;
+  };
+
+  // Riesgos (3 principales)
+  riesgos: {
+    descripcion: string;
+    criticidad: 'ALTA' | 'MEDIA' | 'BAJA';
+    impacto: string;
+    control_iso27001: string;
+    control_ens?: string;
+    evidencia?: string;
+  }[];
+
+  // Acciones recomendadas (5)
   acciones_recomendadas: {
     accion: string;
-    prioridad: 'ALTA' | 'MEDIA' | 'BAJA';
-    plazo: string;
+    prioridad: number | 'ALTA' | 'MEDIA' | 'BAJA';
+    tipo?: string;
+    herramienta: string;
+    comando?: string;
+    tiempo_estimado: string;
+    responsable_sugerido?: string;
+    documentacion_iso: string;
   }[];
+
+  // Métricas
   metricas_cumplimiento: {
     score_actual: number;
     score_objetivo: number;
     gap_critico: string;
+    tiempo_remediacion_estimado: string;
+    controles_ok: number;
+    controles_fallo: number;
+  };
+
+  // Seguimiento
+  seguimiento: {
+    proxima_revision: string;
+    indicadores_clave: string[];
+    tendencia: 'MEJORA' | 'ESTABLE' | 'DETERIORO' | 'DESCONOCIDA';
+    comentarios: string;
   };
 }
 
 export interface GlobalAnalysisRequest {
   equipos: ComplianceData[];
-  fecha_analisis: string;
+  fecha_analisis?: string;
 }
 
 export interface GlobalAnalysisResponse {

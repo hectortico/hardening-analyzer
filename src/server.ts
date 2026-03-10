@@ -16,7 +16,7 @@ app.use(helmet());
 
 // CORS - Permitir solo N8N en producción
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
+  origin: process.env.NODE_ENV === 'production'
     ? ['http://n8n:5678', 'http://localhost:5678', 'http://hardening-analyzer:3000']
     : '*',
   methods: ['GET', 'POST'],
@@ -47,7 +47,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.get('/health', (req: Request, res: Response) => {
   res.json({
     status: 'ok',
-    version: '1.0.0',
+    version: '3.1.0',
     uptime: process.uptime(),
     timestamp: new Date().toISOString()
   });
@@ -57,7 +57,7 @@ app.get('/health', (req: Request, res: Response) => {
 app.get('/', (req: Request, res: Response) => {
   res.json({
     name: 'Hardening Analyzer API',
-    version: '1.0.0',
+    version: '3.1.0',
     description: 'Analizador de Auditoría de Hardening ISO 27001 para Sisteplant',
     endpoints: {
       health: 'GET /health',
