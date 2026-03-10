@@ -221,17 +221,19 @@ export function generarReporteGlobalHTML(
 <!-- SECCIÓN 3: MÉTRICAS DE CUMPLIMIENTO POR CONTROL -->
 <div class="section">
   <h2>📈 Métricas de Cumplimiento por Control</h2>
-  <p style="font-size: 13px; color: #6c757d; margin-bottom: 20px;">Equipos que NO cumplen cada control crítico (ISO 27001 + ENS):</p>
+  <p style="font-size: 13px; color: #6c757d; margin-bottom: 20px;">Estado de cumplimiento por cada control crítico (ISO 27001 + ENS):</p>
   <div class="controles-grid">
     ${metricasControles.map(mc => {
-    const pct = Math.round(mc.equiposFallo / totalEquipos * 100);
-    const color = pct >= 50 ? '#dc3545' : pct >= 20 ? '#ffc107' : '#28a745';
-    const borderColor = pct >= 50 ? '#dc3545' : pct >= 20 ? '#ffc107' : '#28a745';
+    const equiposCumplen = totalEquipos - mc.equiposFallo;
+    const pct = totalEquipos > 0 ? Math.round((equiposCumplen / totalEquipos) * 100) : 0;
+    const color = pct < 50 ? '#dc3545' : pct < 80 ? '#ffc107' : '#28a745';
+    const borderColor = pct < 50 ? '#dc3545' : pct < 80 ? '#ffc107' : '#28a745';
     return `<div class="control-card" style="border-left: 3px solid ${borderColor};">
         <h4 style="margin:0 0 5px">${mc.icono} ${mc.nombre}</h4>
         <div style="font-size: 24px; font-weight: bold; color: ${color}">${pct}%</div>
-        <p style="font-size:13px; margin:2px 0">${mc.equiposFallo} equipo(s) no cumplen ${mc.control}</p>
-        ${mc.equiposFallo > 0 && mc.equiposFallo <= 10 ? `<div class="equipos-list">Equipos: ${mc.hostnames.join(', ')}</div>` : mc.equiposFallo > 10 ? `<div class="equipos-list">Equipos: ${mc.hostnames.slice(0, 5).join(', ')} y ${mc.equiposFallo - 5} más</div>` : ''}
+        <p style="font-size:13px; margin:2px 0">${pct}% de los equipos cumplen con ${mc.control}</p>
+        <p style="font-size:11px; margin:2px 0; color: #6c757d;">${equiposCumplen} cumplen / ${mc.equiposFallo} no cumplen</p>
+        ${mc.equiposFallo > 0 && mc.equiposFallo <= 10 ? `<div class="equipos-list" style="color:#dc3545;">Atención en: ${mc.hostnames.join(', ')}</div>` : mc.equiposFallo > 10 ? `<div class="equipos-list" style="color:#dc3545;">Atención en: ${mc.hostnames.slice(0, 5).join(', ')} y ${mc.equiposFallo - 5} más</div>` : ''}
       </div>`;
   }).join('')}
   </div>
