@@ -1,4 +1,4 @@
-// types.ts - Tipos TypeScript para el proyecto
+﻿// types.ts - Tipos TypeScript para el proyecto
 // Versión 3.1 - Compatible con workflow N8N v5 FINAL
 
 export interface ComplianceCheck {
@@ -151,4 +151,50 @@ export interface GlobalAnalysisResponse {
     equipos_criticos: number;
     score_promedio: number;
   };
+}
+
+// ============================================================
+// SERVIDOR: ServerComplianceData extiende ComplianceData
+// con campos especificos de Windows Server (v3.2)
+// ============================================================
+export interface ServerComplianceData extends ComplianceData {
+  tipo_equipo?: 'SERVIDOR' | 'ENDPOINT';
+  es_maquina_virtual?: boolean;
+  tipo_virtualizacion?: string;
+
+  zabbix_detallado?: {
+    instalado?: boolean;
+    funcional?: boolean;
+    version?: string;
+  };
+
+  wazuh_detallado?: {
+    instalado?: boolean;
+    funcional?: boolean;
+  };
+
+  veeam_detallado?: {
+    instalado?: boolean;
+    funcional?: boolean;
+    tipo?: string;
+  };
+
+  rdp_detallado?: {
+    habilitado?: boolean;
+    nla?: boolean;
+    puerto?: number;
+    cifrado?: number;
+  };
+
+  tls_detallado?: {
+    tls10_habilitado?: boolean;
+    tls11_habilitado?: boolean;
+    tls12_habilitado?: boolean;
+    ssl3_habilitado?: boolean;
+  };
+}
+
+export interface ServerAnalysisRequest {
+  servidor: ServerComplianceData;
+  fecha_analisis?: string;
 }

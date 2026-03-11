@@ -1,9 +1,10 @@
-// server.ts - Servidor principal Express
+﻿// server.ts - Servidor principal Express
 
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
+import analyzeServerRoutes from './routes/analyze-server';
 import analyzeRoutes from './routes/analyze';
 
 const app = express();
@@ -47,7 +48,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.get('/health', (req: Request, res: Response) => {
   res.json({
     status: 'ok',
-    version: '3.1.0',
+    version: '3.2.0',
     uptime: process.uptime(),
     timestamp: new Date().toISOString()
   });
@@ -56,13 +57,14 @@ app.get('/health', (req: Request, res: Response) => {
 // Root
 app.get('/', (req: Request, res: Response) => {
   res.json({
-    name: 'Hardening Analyzer API',
-    version: '3.1.0',
+    name: 'HARDENING ANALYZER API',
+    version: '3.2.0',
     description: 'Analizador de Auditoría de Hardening ISO 27001 para Sisteplant',
     endpoints: {
       health: 'GET /health',
       analyzeIndividual: 'POST /analyze-individual',
-      analyzeGlobal: 'POST /analyze-global'
+      analyzeGlobal: 'POST /analyze-global',
+      analyzeServer: 'POST /analyze-server'
     },
     status: 'running'
   });
@@ -70,6 +72,7 @@ app.get('/', (req: Request, res: Response) => {
 
 // Rutas de análisis
 app.use('/', analyzeRoutes);
+app.use('/', analyzeServerRoutes);
 
 // ========== ERROR HANDLERS ==========
 
