@@ -237,7 +237,7 @@ function generarRiesgosServidor(
   const noAudit = hallazgos.find(h => h.check_name.includes('Auditoria'));
   const actPend = hallazgos.find(h => h.check_name.includes('Actualizaciones') && h.estado === 'ERROR');
 
-  if (noVeeam && noVeeam.estado !== 'OK') {
+  if (noVeeam) {
     riesgos.push({
       descripcion: 'Veeam Backup no detectado o no activo. Continuidad del negocio en riesgo.',
       criticidad:  'MEDIA',
@@ -376,7 +376,7 @@ function generarAccionesServidor(
   const esetHallazgo = hallazgos.find(h => h.check_name.includes('ESET') && h.estado === 'ERROR');
   if (esetHallazgo) {
     acciones.push({
-      accion:       data.proteccion_malware_instalado
+      accion:       esetHallazgo.detalle.includes('instalado pero')
         ? 'Reactivar servicio ESET en el servidor (ekrn / EraAgentSvc)'
         : 'Instalar ESET Server Security y conectar con ESET PROTECT (management center)',
       prioridad:    'ALTA',
