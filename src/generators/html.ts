@@ -377,8 +377,10 @@ function generarResumenEjecutivo(data: ComplianceData, findings: any[]): string 
 
   // Casos especiales: SO sin soporte
   const soSinSoporte = data.sistema_operativo?.soporte_activo === false;
-  const lapsFaltante = data.laps_detallado?.debe_tener_laps !== false && (!data.laps_detallado?.instalado || !data.laps_detallado?.funcional);
-  const bitlockerProblema = (data.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100;
+  const lapsFaltante = data.laps_detallado?.debe_tener_laps !== false &&
+    !data.laps_detallado?.funcional && !data.laps_detallado?.gpo_aplicada;
+  const bitlockerProblema = !data.bitlocker_detallado?.no_aplica &&
+    (data.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100;
 
   const problemasGraves: string[] = [];
   if (soSinSoporte) problemasGraves.push('Windows sin soporte activo de Microsoft');
@@ -477,7 +479,7 @@ function generarRiesgos(data: ComplianceData, findings: any[], criticos: any[]) 
   }
 
   // Riesgo 3: BitLocker incompleto
-  if ((data.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || data.bitlocker_detallado?.secure_boot === false) {
+  if (!data.bitlocker_detallado?.no_aplica && ((data.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || data.bitlocker_detallado?.secure_boot === false)) {
     const desc = [];
     if ((data.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100) {
       desc.push(`cifrado al ${data.bitlocker_detallado?.encriptacion_porcentaje || 0}%`);
@@ -705,7 +707,7 @@ function analizarProblemasGlobales(equipos: ComplianceData[]) {
   // Problema: LAPS
   const sinLAPS = equipos.filter(e =>
     e.laps_detallado?.debe_tener_laps !== false &&
-    (!e.laps_detallado?.instalado || !e.laps_detallado?.funcional)
+    !e.laps_detallado?.funcional && !e.laps_detallado?.gpo_aplicada
   );
   if (sinLAPS.length > 0) {
     problemas.push({
@@ -790,13 +792,13 @@ function calcularMetricasControles(equipos: ComplianceData[]) {
     },
     {
       icono: '🔐', nombre: 'LAPS', control: 'A.9.2 / op.acc.5',
-      equiposFallo: equipos.filter(e => e.laps_detallado?.debe_tener_laps !== false && (!e.laps_detallado?.instalado || !e.laps_detallado?.funcional)).length,
-      hostnames: equipos.filter(e => e.laps_detallado?.debe_tener_laps !== false && (!e.laps_detallado?.instalado || !e.laps_detallado?.funcional)).map(e => e.hostname)
+      equiposFallo: equipos.filter(e => e.laps_detallado?.debe_tener_laps !== false && !e.laps_detallado?.funcional && !e.laps_detallado?.gpo_aplicada).length,
+      hostnames: equipos.filter(e => e.laps_detallado?.debe_tener_laps !== false && !e.laps_detallado?.funcional && !e.laps_detallado?.gpo_aplicada).map(e => e.hostname)
     },
     {
       icono: '💾', nombre: 'BitLocker Completo', control: 'A.8.3 / op.exp.10',
-      equiposFallo: equipos.filter(e => (e.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || e.bitlocker_detallado?.secure_boot === false).length,
-      hostnames: equipos.filter(e => (e.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || e.bitlocker_detallado?.secure_boot === false).map(e => e.hostname)
+      equiposFallo: equipos.filter(e => !e.bitlocker_detallado?.no_aplica && ((e.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || e.bitlocker_detallado?.secure_boot === false)).length,
+      hostnames: equipos.filter(e => !e.bitlocker_detallado?.no_aplica && ((e.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100 || e.bitlocker_detallado?.secure_boot === false)).map(e => e.hostname)
     },
     {
       icono: '🛡️', nombre: 'Firewall Activo', control: 'A.13.1 / mp.si.2',
@@ -844,7 +846,7 @@ function extraerResumenProblemas(equipo: ComplianceData): string {
 
   if (equipo.sistema_operativo?.soporte_activo === false) problemas.push('SO sin soporte');
   if (equipo.laps_detallado?.debe_tener_laps !== false && !equipo.laps_detallado?.funcional) problemas.push('LAPS faltante');
-  if ((equipo.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100) problemas.push('BitLocker incompleto');
+  if (!equipo.bitlocker_detallado?.no_aplica && (equipo.bitlocker_detallado?.encriptacion_porcentaje || 0) < 100) problemas.push('BitLocker incompleto');
   if (equipo.bitlocker_detallado?.secure_boot === false) problemas.push('Secure Boot OFF');
 
   if (problemas.length > 0) return problemas.slice(0, 3).join(', ');
