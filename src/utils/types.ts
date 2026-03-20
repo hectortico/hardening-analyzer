@@ -45,6 +45,8 @@ export interface ComplianceData {
     secure_boot?: boolean;
     gpo_aplicada?: boolean;
     motivo_fallo?: string;
+    no_aplica?: boolean;
+    razon?: string;
   };
   laps_detallado?: {
     instalado?: boolean;
@@ -54,6 +56,11 @@ export interface ComplianceData {
     debe_tener_laps?: boolean;
     ou_equipo?: string;
     motivo_fallo?: string;
+    gpo_aplicada?: boolean;
+    gpo_cuenta?: string;
+    agente_instalado?: boolean;
+    es_dc?: boolean;
+    usuario_existe?: boolean;
   };
 }
 
